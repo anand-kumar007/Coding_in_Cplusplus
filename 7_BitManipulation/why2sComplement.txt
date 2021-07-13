@@ -1,0 +1,33 @@
+In 1's there is a -0 (11111111) and a +0 (00000000), i.e two value for the same 0. On the other hand, in 2's complement, there is only one value for 0 (00000000). This is because
+
++0 --> 00000000
+
+and
+
+-0 --> 00000000 --> 11111111 + 1 --> 00000000
+
+While doing arithmetic operations like addition or subtraction using 1's, we have to add an extra carry bit, i.e 1 to the result to get the correct answer, e.g.:
+
++1(00000001)
+
++
+
+-1(11111110)
+
+-----------------
+
+= (11111111)
+
+but the correct answer is 0. In order to get 0 we have to add a carry bit 1 to the result (11111111 + 1 = 00000000).
+
+In 2's complement, the result doesn't have to be modified:
+
++1(00000001)
+
++
+
+-1(11111111)
+
+-----------------
+
+= 1 00000000
