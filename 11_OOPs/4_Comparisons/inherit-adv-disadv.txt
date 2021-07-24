@@ -1,0 +1,18 @@
+
+Disadvantages:-
+
+1. Inherited functions work slower than normal function as there is indirection.
+2. Improper use of inheritance may lead to wrong solutions.
+3. Often, data members in the base class are left unused which may lead to memory wastage.
+4. Inheritance increases the coupling between base class and derived class. 
+   A change in base class will affect all the child classes.
+
+Advantages:
+
+1. Inheritance promotes reusability. When a class inherits or derives another class, 
+  it can  access all the functionality of inherited class.
+2. Reusability enhanced reliability. The base class code will be already tested and debugged.
+3. As the existing code is reused, it leads to less development and maintenance costs.
+4. Inheritance makes the sub classes follow a standard interface.
+5. Inheritance helps to reduce code redundancy and supports code extensibility.
+6. Inheritance facilitates creation of class libraries.

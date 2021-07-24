@@ -1,0 +1,28 @@
+
+Advantages of OOP
+
+1. Re-usability:
+“Write once and use it multiple times” you can achieve this by using class.
+
+2. Redundancy:
+Inheritance is the good feature for data redundancy. If you need a same functionality in multiple class you can write a common class for the same functionality and inherit that class to sub class.
+
+3. Easy Maintenance:
+It is easy to maintain and modify existing code as new objects can be created with small differences to existing ones.
+
+4. Security:
+Using data hiding and abstraction only necessary data will be provided thus maintains the security of data.
+
+ 
+
+Disadvantages of OOP
+
+
+1. Size:
+Object Oriented Programs are much larger than other programs.
+
+2. Effort:
+Object Oriented Programs require a lot of work to create.
+
+3. Speed:
+Object Oriented Programs are slower than other programs, because of their size.

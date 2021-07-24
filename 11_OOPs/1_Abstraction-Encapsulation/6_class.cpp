@@ -44,7 +44,7 @@ public:
         cout << "destructor called" << endl;
     }
 
-    // operator overloadin
+    // operator overloading
 
     bool operator==(student &a);
 };

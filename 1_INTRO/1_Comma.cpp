@@ -17,5 +17,12 @@ int main()
 
     int a = (1,2,3,40);
     cout<<a;
+
+    int b;
+
+    b = 10,20,30;
+    100;
+    200;
+    cout<<b<<endl;  //10 would be assigned
     return 0;
 }

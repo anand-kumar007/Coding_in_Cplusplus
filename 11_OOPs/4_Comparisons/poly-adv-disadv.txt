@@ -1,0 +1,39 @@
+
+WHAT IS POLYMORPHISM?
+
+Poly means many forms. So it is basically means different types 
+of the object. Polymorphism is a way of defining multiple 
+functionalities under the same name. In other words we can say that 
+we have the same code or operation but it will behave differently 
+in different contexts.
+
+IMPORTANT POINTS ABOUT POLYMORPHISM
+
+A functionality can behave differently for different instances
+The behavior depends on the type of data used in the operation
+Polymorphism is used for implementing inheritance.
+
+
+ADVANTAGES OF POLYMORPHISM
+
+1. It helps programmers reuse the code and classes once written, 
+   tested and implemented. They  can be reused in many ways.
+
+2. Single variable name can be used to store variables of multiple 
+   data types(Float, double,   Long, Int etc).
+
+3. Polymorphism helps in reducing the coupling between different functionalities.
+
+
+DISADVANTAGES OF POLYMORPHISM
+
+
+1. One of the disadvantages of polymorphism is that developers find 
+   it difficult to implement  polymorphism in codes.
+
+2. Run time polymorphism can lead to the performance issue as machine 
+   needs to decide which method or variable to invoke so it basically 
+   degrades the performances as decisions are taken at run time.
+
+3. Polymorphism reduces the readability of the program. One needs to identify 
+   the runtime behavior of the program to identify actual execution time.

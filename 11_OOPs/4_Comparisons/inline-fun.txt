@@ -1,0 +1,38 @@
+
+C++ provides an inline functions to reduce the function call overhead. Inline function is a function that is expanded in line when it is called. When the inline function is called whole code of the inline function gets inserted or substituted at the point of inline function call. This substitution is performed by the C++ compiler at compile time. Inline function may increase efficiency if it is small.
+The syntax for defining the function inline is:
+
+
+Remember, inlining is only a request to the compiler, not a command. Compiler can ignore the request for inlining. Compiler may not perform inlining in such circumstances like:
+1) If a function contains a loop. (for, while, do-while)
+2) If a function contains static variables.
+3) If a function is recursive.
+4) If a function return type is other than void, and the return statement doesn’t exist in function body.
+5) If a function contains switch or goto statement.
+
+
+What is wrong with macro?
+Readers familiar with the C language knows that C language uses macro. The preprocessor replace all macro calls directly within the macro code. 
+It is recommended to always use inline function instead of macro.
+
+According to Dr. Bjarne Stroustrup the creator of C++ that macros are almost never necessary in C++ and they are error prone. 
+
+There are some problems with the use of macros in C++. 
+1. Macro cannot access private members of class. 
+2. Macros looks like function call but they are actually not.
+
+
+#include <iostream>
+using namespace std;
+class S
+{
+    int m;
+public:
+#define MAC(S::m)    // error
+};
+
+
+virtual function() are not inline able
+
+Remember: It is true that all the functions defined inside the class are implicitly inline and C++ compiler will perform inline call of these functions, but C++ compiler cannot perform inlining if the function is virtual. The reason is call to a virtual function is resolved at runtime instead of compile time. Virtual means wait until runtime and inline means during compilation, if the compiler doesn’t know which function will be called, how it can perform inlining?
+

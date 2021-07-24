@@ -26,8 +26,8 @@ void SelectionSort(int arr[], int n)
 {
     //sort the array in ascending order
 
-    //simple think about the procedure of 
-    //selecting the mimium element and placing it in the beginning
+    //like arranging people in a queue of prayer
+    //take smallest and put @ beginning
 
     int minIndex;
 
@@ -48,5 +48,5 @@ void SelectionSort(int arr[], int n)
 
 // O(N^2) for all cases so not recommended at all
 // not stable also other two (Bubble and Insertion are stable)
-// and have O(N) as best time complexity Bubble being optimized 
+// and have O(N^2) as best time complexity Bubble being optimized 
 // with noswap flag
