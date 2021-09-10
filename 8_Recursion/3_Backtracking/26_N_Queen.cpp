@@ -126,3 +126,5 @@ bool isSafe(int **board, int x, int y, int n)
     //else path is safe
     return true;
 }
+//1. row safe checking is not needed since as soon as we put
+//our queen in a row we jump to next row

@@ -1,15 +1,17 @@
 /*
-// C++ program in-place Merge Sort
-// Merges two subarrays of arr[].
-// First subarray is arr[l..m]
-// Second subarray is arr[m+1..r]
-// Inplace Implementation
+
+    C++ program in-place Merge Sort
+    Merges two subarrays of arr[].
+    First subarray is arr[l..m]
+    Second subarray is arr[m+1..r]
+    
 
 */
 
 /*
 merge sort inPlace
 */
+
 #include <iostream>
 using namespace std;
 

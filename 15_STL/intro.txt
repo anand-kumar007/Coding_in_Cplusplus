@@ -1,0 +1,60 @@
+mainly divided into four parts
+
+1. containers
+2. iterators
+3. algorithm
+4. functors
+
+
+1. containers
+
+Sequentials
+- vectors
+- stack
+- queue
+- pair(not a container)
+
+ordered
+- maps
+- multimap
+- set 
+- multiset
+
+unordered 
+- unordered map 
+- unordered set 
+
+Nested containers 
+- vector<vector<int>> 
+- map<int,vector<int>>
+- set<pair<int,string>>
+- vector<map<int,set<int>>>
+etc
+
+
+2. iterators
+
+point to memory address of continers 
+- begin() , end()
+- vector<int> :: iterator it;
+- how to write it in short 
+- continuity for containers (it++,etc can be 
+    done with some while not with some)
+
+3. algorithm 
+- upper bound 
+- lowe bound 
+- sort(comparator)
+- max 
+- min 
+- accumulate
+- reverse 
+- count 
+- find 
+- next_permutations
+- prev_permutations 
+
+etc 
+
+4. functors 
+- classes which can act as functions 

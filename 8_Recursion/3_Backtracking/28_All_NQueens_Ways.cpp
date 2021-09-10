@@ -23,7 +23,7 @@ vector<vector<string>> solveNQueens(int n)
 int main()
 {
     int n;
-    // cout << "enter N : ";
+    cout << "enter N : ";
     cin >> n;
 
     res = solveNQueens(n);

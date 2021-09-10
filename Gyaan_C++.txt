@@ -1,0 +1,37 @@
+
+=======================================
+NULL vs nullptr in C++
+================================
+NULL is a “manifest constant” (a #define of C) that’s actually an integer that can be assigned to a pointer because of an implicit conversion.
+
+nullptr is a keyword representing a value of self-defined type, that can convert into a pointer, but not into integers.
+
+int i = NULL; // OK 
+int i = nullptr; // error - not a integer convertible value 
+int* p = NULL; //ok - int converted into pointer 
+int* p = nullptr; // ok 
+
+============================================
+return statement
+===============================================
+
+return a>=0 ? a : -a; OK
+
+ a >=0 ? return a : return -a; ERROR 
+
+cz The second and third arguments to the ternary operator are expressions, not statements.
+return a
+is a statement
+
+======================================
+v.size() ==> has complexity O(1) nothing else 
+
+using local function declaration we can 
+insert upto 10^5
+using global declaration we can 
+insert upto 10^7
+
+--> in most of cp websites
+this limit is on the allocation of coninous memory allocation 
+hence applied to both vectors and arrays.
+

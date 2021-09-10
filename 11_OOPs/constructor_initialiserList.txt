@@ -1,0 +1,23 @@
+
+list initialization importance
+
+For example, if the expression whatever is the same type as member variable x_, the result of the whatever expression is constructed directly inside x_ — the compiler does not make a separate copy of the object. Even if the types are not the same, the compiler is usually able to do a better job with initialization lists than with assignments.
+
+The other (inefficient) way to build constructors is via assignment, such as: Fred::Fred() { x_ = whatever; }. In this case the expression whatever causes a separate, temporary object to be created, and this temporary object is passed into the x_ object’s assignment operator. Then that temporary object is destructed at the ;. That’s inefficient.
+
+As if that wasn’t bad enough, there’s another source of inefficiency when using assignment in a constructor: the member object will get fully constructed by its default constructor, and this might, for example, allocate some default amount of memory or open some default file. All this work could be for naught if the whatever expression and/or assignment operator causes the object to close that file and/or release that memory (e.g., if the default constructor didn’t allocate a large enough pool of memory or if it opened the wrong file).
+
+Conclusion: All other things being equal, your code will run faster if you use initialization lists rather than assignment.
+
+===========================================
+
+Note: There is no performance difference if the type of x_ is some built-in/intrinsic type, such as int or char* or float. But even in these cases, my personal preference is to set those data members in the initialization list rather than via assignment for consistency. 
+
+Another symmetry argument in favor of using initialization lists even for built-in/intrinsic types: non-static const and non-static reference data members can’t be assigned a value in the constructor, so for symmetry it makes sense to initialize everything in the initialization list.
+
+==========================================
+Now for the exceptions. Every rule has exceptions (hmmm; does “every rule has exceptions” have exceptions? reminds me of Gödel’s Incompleteness Theorems), and there are a couple of exceptions to the “use initialization lists” rule. Bottom line is to use common sense: if it’s cheaper, better, faster, etc. to not use them, then by all means, don’t use them. 
+
+This might happen when your class has two constructors that need to initialize the this object’s data members in different orders. Or it might happen when two data members are self-referential. Or when a data-member needs a reference to the this object, and you want to avoid a compiler warning about using the this keyword prior to the { that begins the constructor’s body (when your particular compiler happens to issue that particular warning). 
+
+Or when you need to do an if…throw test on a variable (parameter, global, etc.) prior to using that variable to initialize one of your this members. This list is not exhaustive; please don’t write me asking me to add another “Or when…”. The point is simply this: use common sense.
