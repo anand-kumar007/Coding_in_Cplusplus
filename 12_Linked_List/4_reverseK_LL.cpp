@@ -1,18 +1,3 @@
-/*
-reverse a linked list by k elements each
-eg: 
-
-1->2->3->4->5->6
-
-k=2
-
-2->1->4->3->6->5
-
-just reverse the first k elements using iterative way
-and call the recusion from (k+1)th elements
-
-*/
-
 #include <iostream>
 using namespace std;
 
@@ -76,7 +61,16 @@ Node *Reverse_K(Node *&head, int k)
     Node *CurrPtr = head;
     Node *PrevPtr = NULL;
     Node *NextPtr;
-
+    Node* temp = head;
+    while(temp != NULL)
+    {
+            temp = temp->next;
+            total_nodes++;
+    }
+        
+    if(total_nodes <k)
+        return head;
+        
     int count = 0;
 
     while (CurrPtr != NULL && count < k)
@@ -112,8 +106,8 @@ int main()
     insert_End(head, 3);
     insert_End(head, 4);
     insert_End(head, 5);
-    insert_End(head, 6);
-    insert_End(head, 7);
+    // insert_End(head, 6);
+    // insert_End(head, 7);
 
     display_LL(head);
 
