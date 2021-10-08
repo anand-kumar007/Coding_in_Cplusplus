@@ -119,3 +119,23 @@ int main()
 
     return 0;
 }
+
+// the best solution same as iterative one
+Node* Reverse(Node* head, Node* prev)
+    {
+        if(head == nullptr)
+            return prev;
+        
+        //just follow the same approach as of iterative soln
+        Node* adv = head->next;
+        head->next = prev;
+        
+        prev = head;
+        head = adv;
+        
+        return Reverse(head,prev);
+    }
+    Node* reverseList(Node* head) {
+        
+        return Reverse(head,NULL);
+    }
