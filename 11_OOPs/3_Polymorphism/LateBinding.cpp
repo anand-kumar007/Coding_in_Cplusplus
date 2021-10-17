@@ -35,6 +35,9 @@ int main()
 }
 
 
+// Derived *d1,d2;
+//     A obj;
+//     d1 = &obj;  --> this is an error bcz base class pointer can point to derived not the vice versa
 /*
 Output :
 Derived class
