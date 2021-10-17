@@ -25,7 +25,7 @@ int main()
 {
     Derived d1,d2;
     A *obj = &d1;
-    obj->print();
+    obj->print(); // or (*obj).print(); both are same
     d1.print();  //derived class
     
     d1.A::print(); //base class
